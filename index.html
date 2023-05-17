@@ -1,15 +1,28 @@
 <!DOCTYPE html>
- <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-     <title> Sticky Navigation Bar | CodingLab </title> 
-    <link rel="stylesheet" href="style.css">
-   </head>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navigation Bar | CodingLab</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add your responsive styles here */
+    @media screen and (max-width: 600px) {
+      /* Example media query for screens smaller than 600px */
+      /* Adjust styles as needed */
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
 <body>
   <nav>
     <div class="nav-content">
       <div class="logo">
-        <img src="tik.png" width="150px" height="80px">
+        <img src="img/tik.png" width="150px" height="80px" alt="Logo">
       </div>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
@@ -22,59 +35,61 @@
   </nav>
   <section class="home"></section>
   <div class="box1">
-    <div class="text"> 
-      <h1><br><br>
-        HERE YOU<br> WILL FIND THE<br> SECRET OF FITNESS</h1><br><br>
-          <pre class="font">                   "Joining THE IRON KINGDOM gym. It<br>can help you stay motivated to exercise consistently.<br>This is a great way to build muscle,lose weight,lower<br>blood pressure, boost mental focus, and more. <br>Over time, you can look better, feel better, and<br>accomplish things you never thought possible!"<br><br>     </pre>
+    <div class="text">
+      <h1>
+        <br><br>HERE YOU<br>WILL FIND THE<br>SECRET OF FITNESS
+      </h1><br><br>
+      <pre class="font">
+        "Joining THE IRON KINGDOM gym. It
+        can help you stay motivated to exercise consistently.
+        This is a great way to build muscle, lose weight, lower
+        blood pressure, boost mental focus, and more.
+        Over time, you can look better, feel better, and
+        accomplish things you never thought possible!"
+      </pre>
     </div>
   </div>
-  <div  class="box2">
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="img" alt="gym" src= https://source.unsplash.com/670x480/?gym>
-          </div>
-  </div>
- 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <button><img src="equi.jpg">
-     </button>
-     <div class="gbutton">
-      <a href="img.html">The IronKingdom Gallary</a>
-      </div>
+  <div class="box2">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="img" alt="gym" src="https://source.unsplash.com/670x480/?gym">
+    </div>
   </div>
 
-  <div class="column" style="background-color:#bbb;">
-     <video controls width="300" height="170" autoplay>
-         <source src="vid.mp4" type="video/mp4">
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <button><img src="img/equi.jpg" alt="Equipment"></button>
+      <div class="gbutton">
+        <a href="img.html">The IronKingdom Gallery</a>
+      </div>
+    </div>
+
+    <div class="column" style="background-color:#bbb;">
+      <video controls width="300" height="170" autoplay>
+        <source src="vid.mp4" type="video/mp4">
       </video>
-     <div class="gbutton">
-      <a href="img.html">The IronKingdom Videos</a>
+      <div class="gbutton">
+        <a href="img/img.html">The IronKingdom Videos</a>
       </div>
-  </div>
+    </div>
 
-
-  <div class="column" style="background-color:#ccc;">
-   <button><img src="before.jpg">
-     </button>
-     <div class="gbutton">
-      <a href="img.html">The IronKingdom Results</a>
+    <div class="column" style="background-color:#ccc;">
+      <button><img src="img/before.jpg" alt="Results"></button>
+      <div class="gbutton">
+        <a href="img.html">The IronKingdom Results</a>
       </div>
+    </div>
   </div>
- 
-</div>
-
- 
 
   <script>
-  let nav = document.querySelector("nav");
+    let nav = document.querySelector("nav");
     window.onscroll = function() {
-      if(document.documentElement.scrollTop > 20){
+      if (document.documentElement.scrollTop > 20) {
         nav.classList.add("sticky");
-      }else {
+      } else {
         nav.classList.remove("sticky");
       }
-    }
+    };
   </script>
-
 </body>
+
 </html>
